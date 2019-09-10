@@ -1,0 +1,24 @@
+--------------Loop----------------
+function_name loops_name max_iteration 
+loop main L1 32
+loop main L2 64
+loop main L4 8
+
+
+-----------Array-----------
+array_name num_elements dimension function_names
+array reg 32 main
+array dmem 64 main
+
+
+
+----------Functions----------
+
+
+
+----------Interfaces-----------
+ap_none
+ap_fifo
+ap_bus
+axis
+m_axi

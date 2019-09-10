@@ -1,0 +1,26 @@
+--------------Loop----------------
+function_name loops_name max_iteration 
+loop BF_set_key L2 18
+loop BF_set_key L3 18
+loop BF_set_key L4 1024
+loop blowfish_main L7 8
+
+-----------Array-----------
+array_name num_elements dimension function_names
+array in_key 5200 blowfish_main
+array out_key 5200 blowfish_main
+array indata 40 blowfish_main
+array outdata 40 blowfish_main
+
+----------Functions----------
+function_name argument_list
+function BF_set_key len data
+function BF_encrypt data encrypt
+function BF_cfb64_encrypt in out length ivec num encrypt
+
+----------Interfaces-----------
+ap_none
+ap_fifo
+ap_bus
+axis
+m_axi

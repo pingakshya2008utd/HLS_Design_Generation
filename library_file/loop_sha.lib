@@ -1,0 +1,31 @@
+--------------Loop----------------
+function_name loops_name max_iteration 
+loop Autocorrelation L1 159
+loop sha_transform L4 16
+loop sha_transform L5 64
+loop sha_transform L6 19
+loop sha_transform L7 19
+loop sha_transform L8 19
+loop sha_transform L9 19
+loop sha_update L10 64
+loop sha_stream l11 2
+
+-----------Array-----------
+array_name num_elements dimension function_names
+array W 80 sha_transform
+
+
+
+----------Functions----------
+function_name argument_list
+function local_memset s c n e
+function local_memcpy s1 s2 n
+function sha_update buffer count
+
+
+----------Interfaces-----------
+ap_none
+ap_fifo
+ap_bus
+axis
+m_axi

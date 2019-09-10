@@ -1,0 +1,90 @@
+--------------Loop----------------
+function_name loops_name max_iteration 
+loop ChenIDct L1 8
+loop ChenIDct L2 8
+loop ChenIDct L3 64
+loop IZigzagMatrix L4 64
+loop IQuantize L5 64
+loop PostshiftIDctMatrix L6 64
+loop BoundIDctMatrix L7 64
+loop WriteOneBlock L9 64
+loop YuvToRgb L10 64
+loop decode_start L11 3
+loop decode_start L12 3
+loop decode_start L14 3
+loop decode_start L15 3
+loop decode_start L17 4
+loop decode_start L18 4
+loop decode_start L19 3
+loop huff_make_dhuff_tb L25 16
+loop DecodeHuffMCU L29 64
+loop get_sos L46 3
+loop get_dht L38 16
+loop get_dht L39 16
+loop get_dqt L41 64
+loop jpeg2bmp_main L43 5207
+
+
+
+
+
+
+
+-----------Array-----------
+array_name num_elements dimension function_names
+array extend_mask 20 DecodeHuffMCU
+array bit_set_mask 32 DecodeHuffMCU
+array lmusk 32 buf_getv
+array zigzag_index 64 IZigzagMatrix
+array out_unread_marker 10 read_markers
+array out_length_get_dht 4 get_dht
+array out_index_get_dht 4 get_dht
+array out_count_get_dht 4 get_dht
+array izigzag_index 64 get_dqt
+array huffsize 257 huff_make_dhuff_tb
+array huffcode 257 huff_make_dhuff_tb
+
+
+
+
+
+----------Functions----------
+function_name argument_list
+function ChenIDct x y
+function IZigzagMatrix imatrix omatrix
+function IQuantize matrix qmatrix
+function PostshiftIDctMatrix matrix shift
+function BoundIDctMatrix matrix Bound
+function WriteOneBlock store out_buf width height voffs hoffs
+function WriteBlock store p_out_vpos p_out_hpos p_out_buf
+function Write4Blocks store1 store2 store3 store4 p_out_vpos p_out_hpos p_out_buf
+function YuvToRgb p y_buf u_buf v_buf
+function decode_block comp_no out_buf HuffBuff
+function decode_start out_data_image_width out_data_image_height out_data_comp_vpos out_data_comp_hpos
+function huff_make_dhuff_tb p_xhtbl_bits p_dhtbl_ml p_dhtbl_maxcode p_dhtbl_mincode p_dhtbl_valptr
+function DecodeHuffman Xhuff_huffval Dhuff_ml Dhuff_maxcode Dhuff_mincode Dhuff_valptr
+function DecodeHuffMCU out_buf num_cmp
+
+
+
+
+
+
+----------Interfaces-----------
+ap_none
+ap_fifo
+ap_bus
+axis
+m_axi
+
+
+
+
+
+
+
+
+
+
+
+

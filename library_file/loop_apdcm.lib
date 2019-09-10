@@ -1,0 +1,47 @@
+--------------Loop----------------
+function_name loops_name max_iteration 
+loop encode L1 10
+loop encode L2 22
+loop decode L3 10
+loop decode L4 10
+loop reset L5 6
+loop reset L6 6
+loop reset L7 24
+loop reset L8 11
+loop filtez L9 6
+loop quantl L10 30
+loop adpcm_main L11 100
+loop adpcm_main L12 100
+
+-----------Array-----------
+array_name num_elements dimension function_names
+array qq6_code6_table 64 decode
+array tqmf 24 encode
+array qq4_code4_table 16 decode encode
+array wl_code_table 16 logscl
+array ilb_table 16 scale
+array decis_levl 30 quantl
+array quant26bt_pos 31 quantl
+array quant26bt_neg 31 quantl
+array h 24 decode encode
+
+----------Functions----------
+function_name argument_list
+function encode xin1 xin2
+function decode input
+function filtez bpl dlt 
+function upzero dlt dlti bli
+function filtep rlt1 al1 rlt2 al2
+function quantl el detl
+function logscl il nbl
+function scalel nbl shift_constant
+function uppol2 al1 al2 plt plt1 plt2
+function uppol1 al1 apl2 plt plt1
+function logsch ih nbh
+
+----------Interfaces-----------
+ap_none
+ap_fifo
+ap_bus
+axis
+m_axi

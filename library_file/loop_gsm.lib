@@ -1,0 +1,36 @@
+--------------Loop----------------
+function_name loops_name max_iteration 
+loop Autocorrelation L1 159
+loop Autocorrelation L2 159
+loop Autocorrelation L6 159
+loop Reflection_coefficients L7 8
+loop Reflection_coefficients L8 8
+loop Reflection_coefficients L9 6
+loop Reflection_coefficients L10 8
+loop Reflection_coefficients L12 8
+loop Reflection_coefficients L13 8
+loop Transformation_to_Log_Area_Ratios L14 8
+
+-----------Array-----------
+array_name num_elements dimension function_names
+array ACF 9 Reflection_coefficients
+array bitoff 156 gsm_norm
+
+
+----------Functions----------
+function_name argument_list
+function gsm_add a b
+function gsm_mult a b
+function gsm_mult_r a b
+function gsm_div num word
+function Autocorrelation s L_ACF
+function Reflection_coefficients L_ACF r
+function Gsm_LPC_Analysis s LARc
+
+
+----------Interfaces-----------
+ap_none
+ap_fifo
+ap_bus
+axis
+m_axi

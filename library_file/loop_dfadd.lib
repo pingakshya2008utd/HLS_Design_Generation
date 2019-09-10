@@ -1,0 +1,23 @@
+--------------Loop----------------
+function_name loops_name max_iteration 
+
+-----------Array-----------
+array_name num_elements dimension function_names
+
+
+----------Functions----------
+function_name argument_list
+function extractFloat64Exp a
+function roundAndPackFloat64 zSign zExp zSig
+function packFloat64 zSign zExp zSig
+function normalizeRoundAndPackFloat64 zSign zExp zSig
+function addFloat64Sigs a b zSign
+function subFloat64Sigs a b zSign
+
+
+----------Interfaces-----------
+ap_none
+ap_fifo
+ap_bus
+axis
+m_axi
