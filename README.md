@@ -1,5 +1,7 @@
 # HLS_Design_Generation
 HLS Design Generation C++ codes
+
+
 Hi,
 This C++ project is used to generate directive files which contain the pragma information of the HLS codes. The input to the code is the basic HLS code and .lib files which contains the information of the loops, arrays and functions of the HLS codes. Sample .lib files are provided in the loop_names folder. 
 
