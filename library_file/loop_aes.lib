@@ -1,0 +1,51 @@
+--------------Loop----------------
+function_name loops_name max_iteration 
+#loop decrypt L1 12
+loop decrypt L2 16
+#loop encrypt L3 9
+loop encrypt L4 16
+loop encrypt L1 24
+loop MixColumn_AddRoundKey L5 8
+loop MixColumn_AddRoundKey L6 8
+loop AddRoundKey_InversMixColumn L7 8
+#loop AddRoundKey_InversMixColumn L8 8
+#loop AddRoundKey_InversMixColumn L9 8
+loop AddRoundKey L10 8
+#loop KeySchedule L11 8
+#loop KeySchedule L12 4
+#loop KeySchedule L13 112
+#loop KeySchedule L14 4
+#loop KeySchedule L15 4
+
+
+
+
+-----------Array-----------
+array_name num_elements dimension function_names
+array key 16 aes_main
+array statement 16 aes_main
+array out_dec_statemt 16 decrypt
+array out_enc_statemt 16 encrypt
+array Sbox 256 ByteSub_ShiftRow
+array invSbox 256 InversShiftRow_ByteSub
+array Rcon0 30 KeySchedule
+
+----------Functions----------
+function decrypt statemt key type
+function encrypt statemt key type
+function ByteSub_ShiftRow statemt nb
+function SubByte invSbox
+function InversShiftRow_ByteSub statemt nb
+function MixColumn_AddRoundKey statemt n
+function AddRoundKey_InversMixColumn statemt nb n
+function AddRoundKey statemt type n
+function KeySchedule type key
+
+
+
+----------Interfaces-----------
+ap_none
+ap_fifo
+ap_bus
+axis
+m_axi
