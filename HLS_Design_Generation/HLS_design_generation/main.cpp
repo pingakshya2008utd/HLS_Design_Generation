@@ -6,7 +6,7 @@
 #include "generate_ds.h"
 #include "dse.h"
 
-
+// Random number generator seeded with current time
 default_random_engine dre(chrono::steady_clock::now().time_since_epoch().count());
 int random(int lim) {
 	uniform_int_distribution<int> uid{ 0,lim };   // help dre to generate nos from 0 to lim (lim included);
@@ -294,7 +294,7 @@ void dse::start_dse(generate_ds ds1) {
 	}
 
 
-	//system("O:/HLS_Projects/commands_blowfish.bat");
+	// system("O:/HLS_Projects/commands_blowfish.bat");
 
 
 }

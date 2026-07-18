@@ -1,3 +1,5 @@
+#pragma once
+
 class generate_ds {
 	loop_list loop_names;
 	array_list array_names;
@@ -9,6 +11,4 @@ public:
 	array_list print_array_list();
 	func_list print_func_list();
 
-
 };
-

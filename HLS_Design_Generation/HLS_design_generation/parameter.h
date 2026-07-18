@@ -1,3 +1,5 @@
+#pragma once
+
 class parameter {
 
 protected:
@@ -11,5 +13,4 @@ public:
 	int get_range_val();
 	string get_func_name();
 
-}; 
-
+};

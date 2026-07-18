@@ -1,6 +1,6 @@
 # HLS Design Generation
 
-A C++ tool that automates **Design Space Exploration (DSE)** for High-Level Synthesis (HLS) by randomly generating valid Vivado/Vitis HLS directive files. Instead of manually crafting pragma combinations, this tool reads a lightweight description of a benchmark's loops, arrays, and functions, then emits hundreds of candidate TCL directive files ready to be evaluated in the HLS flow.
+A C++ tool that automates **Design Space Exploration (DSE)** for High-Level Synthesis (HLS) by randomly generating valid Vivado/Vitis HLS directive files. Instead of manually crafting pragma combinations, this tool reads a `.lib` metadata file describing the target design's loops, arrays, and functions, then emits 100 randomised TCL directive scripts ready for HLS evaluation.
 
 ---
 
@@ -22,7 +22,7 @@ A C++ tool that automates **Design Space Exploration (DSE)** for High-Level Synt
 
 ## Overview
 
-High-Level Synthesis transforms C/C++ descriptions into RTL; its quality of results (QoR — latency, throughput, area) is highly sensitive to the directives (pragmas) applied to loops, arrays, and functions. Exhaustive enumeration of all directive combinations is infeasible for even modest designs.
+High-Level Synthesis transforms C/C++ descriptions into RTL; its quality of results (QoR — latency, throughput, area) is highly sensitive to the directives (pragmas) applied to loops, arrays, and functions. The search space is combinatorially large, making manual exploration impractical.
 
 This project addresses that by:
 
